@@ -1,0 +1,296 @@
+Recap of the previous clsses.
+
+SERVER SIDE DEVELOPMENT
+-Dependencies
+-Package.json
+-Modules
+-Node JS overview
+- Node Package Manager (NPM)
+-
+
+
+There are some modules that came with Node js pre-installed. These modules are refer to as prebuilt. Examples are these
+
+To use an http moule for example to create an http server, u have to require or import the module
+
+
+var http = require('http')
+
+
+open ur sublime and lets write our first Node Js code
+
+save the file as nodeJsFirstCode.js
+
+
+lets use the built in module called http to create an http server. That means we have to require it in our code.
+
+
+after we have required our code, we can start usiing it as the http variable we defined.
+
+to create a server with http, we will call a method called createServer() 
+
+Now, create server takes a parameter which is a function.
+
+createServer(function(){})
+
+
+the function that createServer takes also take parameters which is the request and response. The request is an object containing the request to pass into the server, and the response is the object containing what the server respond when you make your request.
+
+
+createServer(function( req, res){})
+
+with the request and response parameter you can define what you want your server to do when anybody make a request to it.
+
+Lets say we want to let our server respond with an header of type html and status 200 (this means OK response) when anybody make a request to it.
+
+when we make our header to be a type html, what it means is that we are telling which ever device that is making request to our server that the response coming is an HTML text.
+
+
+if we make it of type application/ json we are telling the device that the response is a json file.
+
+
+res.writeHead(200, {'Content-Type' : 'text/html'})   ---- 200 means that the response is ok, and the content-type shows that the device should interpret the response as an html text
+
+
+is that the end of the resposne i want to give my client?   No, because ive not even define what the html is. If i want to define my text , i can call on a method called end and pass my html text
+
+
+
+res.end('Hello World!. This is my first Node Js code.')
+
+
+
+With this i have stated what my response will gonna be.
+
+How can i communicate with my server? I can tell my server to listen at a particular port by calling on the listen() method
+
+
+.listen(port)
+
+With this we have created our first Node Js server (http server). 
+
+
+To start our server we go to our termiinal and run node
+
+
+if i want to make or write my own module, i will use the js keywrod called exports
+
+so lets say i have a function that returns date
+
+var myDate = function(){
+	return new Date()
+}
+
+
+exports.myModuleName = myDate()
+
+
+
+the url i showed u is called query string. That is how google knows what you are serching for.... i meand google server.
+
+A quesry string is always in ur URL and it always starts with a question mark.
+
+the domain name for google is google.com right?
+
+dont forget that req is request, we just decided to shorten it. So im calling the url part of any request to the server
+req.url  ---------- contains the part of the url that comes after the domain name.
+
+
+if i want to use some part of my url in my server side to perform some task, example is the google search i showed u. To do this, im going to use the URL module. This module gives me the ability to parse my url string
+
+first i will require it in my code like so
+
+var url = require('url')
+
+the url as a pardse method, and it takes two parameters, the url i want to parse and a boolean specifying if it should parse or not. To use it i can say
+
+
+var myParseUrl = url.parse(req.url, true).query
+
+
+
+We want to create an html file that will serve as a response to enyone that makes a request to our server.
+
+so lets create an html file named demoServer.html and put it in the same directory as our server file called readFile.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
