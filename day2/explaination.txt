@@ -1,0 +1,58 @@
+lets say we want to use a packege or module called upper-case
+
+we know that upper-case does not come with node js right?
+
+to download the upper-case module, i will use npm
+
+	npm install upper-case
+// are the same but yarn is faster
+
+
+let me explaine what the mpm flags mean
+
+--save    it means that the module is a dpendency module. It means ur app will solely depend on it to work.
+--dev-save  it means that the module is a dev-dependency. That means ur system depends on it to run ur app successfully.
+-g         it means that the package should be installed globally on ur system. that means u can use the package from anywhere on ur system.
+
+
+
+YARN
+yarn add upper-case
+
+
+when u install a package, it is going to autmatically create a folder called node_modules in ur project folder.
+
+The node_module folder will contain all the modules u have installed.
+
+if u have a folder structure that looks like this
+
+---- demo
+	---- test
+		----index.html
+	----- make
+		-----index.html
+----node_modules               //the node module will work for all the folders in demo
+
+
+
+
+
+Now i have downloaded the package i need for the file upload called formidable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
